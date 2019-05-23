@@ -1,4 +1,4 @@
-import { addComment, removeComment } from '../actions/commentAction';
+import { addComment, deleteComment } from '../actions/commentAction';
 import reducer from './commentReducer';
 
 describe('comment reducer test', () => {
@@ -18,6 +18,17 @@ describe('comment reducer test', () => {
 
     expect(newState).toEqual({
       1: ['hey', 'we all die alone']
+    });
+  });
+
+  it('can do delete comment', () => {
+    const initialState = {
+      1: ['hey', 'comment2'],
+    };
+    const newState = reducer(initialState, deleteComment(1, 0));
+
+    expect(newState).toEqual({
+      1: ['comment2']
     });
   });
 
