@@ -14,5 +14,15 @@ describe('post selectors', () => {
       { id: 1, title: 'post2', body: 'noone' }
     ]);
   });
-  
+
+  it('gets a post by index', () => {
+    const state = {
+      posts: [
+        { title: 'title1', body: 'body1' },
+        { title: 'title2', body: 'body2' }
+      ]
+    };
+    expect(getPost(state, 0)).toEqual({ id: 0, title: 'title1', body: 'body1' });
+  });
+
 });
