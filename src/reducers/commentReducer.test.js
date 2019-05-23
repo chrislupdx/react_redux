@@ -43,7 +43,7 @@ describe('comment reducer test', () => {
 
     expect(newState).toEqual({
       0: ['rudeness'],
-      2: ['do not call it optimism']
+      2: ['do not call it optimism']  
     });
   });
 
