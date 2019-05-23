@@ -19,7 +19,7 @@ describe('reducer test', () => {
       }
     );
   });
-  it('delete', () => {
+  it('deletes', () => {
     const initialState2 = {
       post: {
         title: 'pigs',
