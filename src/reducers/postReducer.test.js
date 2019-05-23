@@ -20,21 +20,17 @@ describe('reducer test', () => {
     );
   });
   it('deletes', () => {
-    const initialState2 = {
-      post: {
-        title: 'pigs',
-        body: 'fly',
-      },
-    };
+    const initialState2 = [
+      { title: 'p1', body: 'body1' },
+      { title: 'p2', body: 'body2' },
+      { title: 'p3', body: 'body3' }
+    ];
 
-    expect(reducer(initialState2, removePost({ title:null, body:null }))).toEqual(
-      {
-        'post':{
-          title: null,
-          body: null
-        }
-      }
-    );
+    const newState = reducer(initialState2, removePost(0));
+    expect(newState).toEqual([
+      { 'title': 'p2', 'body': 'body2' },
+      { 'title': 'p3', 'body': 'body3' }
+    ]);
   });
 
     

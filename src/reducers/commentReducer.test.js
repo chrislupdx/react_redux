@@ -1,4 +1,5 @@
 import { addComment, deleteComment } from '../actions/commentAction';
+import { removePost } from '../actions/postActions';
 import reducer from './commentReducer';
 
 describe('comment reducer test', () => {
@@ -29,6 +30,18 @@ describe('comment reducer test', () => {
 
     expect(newState).toEqual({
       1: ['comment2']
+    });
+  });
+
+  it('works with deletepost', () => {
+    const initialState = {
+      1: ['hey', 'nope'],
+      2: ['do not call it optimism']
+    };
+    const newState = reducer(initialState, removePost(1));
+
+    expect(newState).toEqual({
+      2: ['do not call it optimism']
     });
   });
 

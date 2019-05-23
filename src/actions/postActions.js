@@ -7,9 +7,9 @@ export const addPost = post => {
 };
 
 export const REMOVE_POST = 'remove post';
-export const removePost = post => {
+export const removePost = id => {
   return {
     type: REMOVE_POST,
-    payload: post
+    payload: id
   };
 };
