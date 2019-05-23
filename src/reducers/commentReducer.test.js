@@ -10,6 +10,15 @@ describe('comment reducer test', () => {
     });
   });
 
-  it('removescomment reducer', () => {})
+  it('can comment @ pre-exisiting comments', () => {
+    const initialState = {
+      1: ['hey']
+    };
+    const newState = reducer(initialState, addComment(1, 'we all die alone'));
+
+    expect(newState).toEqual({
+      1: ['hey', 'we all die alone']
+    });
+  });
 
 });
