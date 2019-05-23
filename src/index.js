@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 import { ADD_POST, addPost, REMOVE_POST, removePost } from './actions/postActions'; 
-import reducer from './reducers/lunchReducers';
+import { ADD_COMMENT, addComment } from './actions/commentAction';
 
 
 const store = createStore(reducer);
@@ -10,3 +10,6 @@ console.log('add post', store.getState());
 
 store.dispatch(removePost({ title: null, body: null }));
 console.log('removepost post', store.getState());
+
+store.dispatch(addComment({ comment: 'comment' }));
+console.log('added a comment', store.getState());

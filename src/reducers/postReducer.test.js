@@ -1,4 +1,4 @@
-import { ADD_POST, addPost, REMOVE_POST, removePost } from '../actions/postActions';
+import { addPost, removePost } from '../actions/postActions';
 import reducer from './postReducer';
 
 describe('reducer test', () => {
