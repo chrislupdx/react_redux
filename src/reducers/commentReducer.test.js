@@ -33,14 +33,16 @@ describe('comment reducer test', () => {
     });
   });
 
-  it('works with deletepost', () => {
+  it('works with removePost', () => {
     const initialState = {
+      0: ['rudeness'],
       1: ['hey', 'nope'],
       2: ['do not call it optimism']
     };
     const newState = reducer(initialState, removePost(1));
 
     expect(newState).toEqual({
+      0: ['rudeness'],
       2: ['do not call it optimism']
     });
   });
