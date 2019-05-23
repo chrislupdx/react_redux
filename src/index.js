@@ -13,3 +13,4 @@ console.log('removepost post', store.getState());
 
 store.dispatch(addComment({ comment: 'comment' }));
 console.log('added a comment', store.getState());
+
