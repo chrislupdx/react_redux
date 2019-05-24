@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
-function Comments({ comments, deleteComent }) {
+function Comments({ comments, deleteComment }) {
   const commentList = comments.map((comment, i) => {
     <li key={i}>
-      <Comment id={i} comment={comment} deleteComment={deleteComent} />
+      <Comment id={i} comment={comment} deleteComment={deleteComment} />
     </li>;
   });
 
