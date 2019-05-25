@@ -15,7 +15,7 @@ function Post({ post, deletePost }) {
 }
 
 Post.propTypes = {
-  deletepost: PropTypes.func.isRequired,
+  deletePost: PropTypes.func.isRequired,
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired

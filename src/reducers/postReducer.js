@@ -5,7 +5,7 @@ const initialState = [];
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case ADD_POST:
-      return { ...state, post: action.payload };
+      return [...state, action.payload];
     case REMOVE_POST:
       return [
         ...state.slice(0, action.payload),

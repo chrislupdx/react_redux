@@ -17,7 +17,7 @@ function PostDetail({ post }) {
   );
 }
 
-PostDetail.PropTypes = {
+PostDetail.propTypes = {
   post: PropTypes.shape({
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired

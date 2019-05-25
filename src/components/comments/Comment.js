@@ -11,7 +11,7 @@ function Comment({ id, comment, deleteComment }) {
   );
 }
 
-Comment.PropTypes = {
+Comment.propTypes = {
   id: PropTypes.number.isRequired,
   comment: PropTypes.string.isRequired,
   deleteComment: PropTypes.func.isRequired
