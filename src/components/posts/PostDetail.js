@@ -4,7 +4,7 @@ import CommentByPostId from '../../containers/comments/ComentsByPostId';
 import CreateComment from '../../containers/comments/CreateComment.js';
 
 function PostDetail({ post }) {
-  const paras = post.body.split('/n').map((p, i) => (
+  const paras = post.body.split('\n').map((p, i) => (
     <p key={i}>{p}</p>
   ));
   return (

@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 
 function Comments({ comments, deleteComment }) {
-  const commentList = comments.map((comment, i) => {
+  const commentList = comments.map((comment, i) => (
     <li key={i}>
       <Comment id={i} comment={comment} deleteComment={deleteComment} />
-    </li>;
-  });
+    </li>
+  ));
 
   return (
     <ul>
